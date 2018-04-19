@@ -1,0 +1,31 @@
+﻿<Window x:Name="window" x:Class="BaseOfComponent.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BaseOfComponent"
+        mc:Ignorable="d"
+        Title="MainWindow" HorizontalAlignment="Center" 
+        VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+    <Grid>
+            <TreeView x:Name="treeView1" Margin="0,0,0,0">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Path=Components}">
+                        <TextBlock Text="{Binding Name}" />
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+                <TreeView.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Добавить компонент">
+                            <MenuItem Header="Компонент верхнего уровня"/>
+                            <MenuItem Header="Вложенный элемент"/>
+                        </MenuItem>
+                        <MenuItem Header="Изменить компонент"/>
+                        <MenuItem Header="Удалить компонент"/>
+                        <Separator/>
+                        <MenuItem Header="Отчет о сводном составе"/>
+                    </ContextMenu>
+                </TreeView.ContextMenu>
+            </TreeView>
+    </Grid>
+</Window>
