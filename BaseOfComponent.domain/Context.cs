@@ -8,8 +8,13 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace BaseOfComponent
 {
-    public class ElementContext:DbContext
+    public class ElementContext : DbContext
     {
+        public ElementContext()
+        {
+            Database.SetInitializer<ElementContext>(null);
+        }
+
         public DbSet<Element> Elements { get; set; }
         public DbSet<Relation> Relations { get; set; }
 

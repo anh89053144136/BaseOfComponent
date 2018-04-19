@@ -14,6 +14,7 @@ namespace BaseOfComponentWinform
         [STAThread]
         static void Main()
         {
+            MigrationStart.MigrateToLatest();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
