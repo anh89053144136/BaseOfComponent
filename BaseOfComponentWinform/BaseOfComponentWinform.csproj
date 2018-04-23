@@ -125,6 +125,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="MigrationStart.cs" />
+    <Compile Include="Migrations\Migrations_2_report_proc.cs" />
     <Compile Include="Migrations\Migrations_1_tables.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

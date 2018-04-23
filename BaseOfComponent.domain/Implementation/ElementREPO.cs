@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,5 +24,10 @@ namespace BaseOfComponent.domain.Implementation
         }
 
         public List<Relation> AllElements() => ElementsBase.Relations.ToList();
+
+        public Element[] ReportById(int parentId)
+        {
+            return ElementsBase.Database.SqlQuery<Element>("EXECUTE [dbo].[Report] @parentId", new SqlParameter("parentId", parentId)).ToArray();
+        }
     }
 }
