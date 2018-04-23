@@ -22,6 +22,11 @@ namespace BaseOfComponent.domain.Implementation
             ElementsBase.Elements.Add(element);
             ElementsBase.SaveChanges();
         }
+        
+        public void DeleteElement(int Id)
+        {
+            ElementsBase.Elements.Remove(ElementsBase.Elements.FirstOrDefault(x => x.Id == Id));
+        }
 
         public List<Relation> AllElements() => ElementsBase.Relations.ToList();
 

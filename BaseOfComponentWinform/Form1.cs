@@ -46,6 +46,8 @@ namespace BaseOfComponentWinform
         private void DeleteMenu_Click(object sender, EventArgs e)
         {
             treeView1.SelectedNode.Remove();
+            var v=treeView1.SelectedNode.Tag;
+            var index = treeView1.SelectedNode.Index;
         }
 
         private void AddParent_Click(object sender, EventArgs e)

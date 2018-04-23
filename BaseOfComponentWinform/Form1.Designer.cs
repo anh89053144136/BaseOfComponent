@@ -36,8 +36,8 @@
             this.AddChild = new System.Windows.Forms.ToolStripMenuItem();
             this.Rename = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.SummaryReport = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.SummaryReport = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +63,7 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.contextMenuStrip1.ShowImageMargin = false;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(188, 120);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(188, 98);
             // 
             // AddToolStripMenuItem
             // 
@@ -102,16 +102,16 @@
             this.DeleteMenu.Text = "Удалить";
             this.DeleteMenu.Click += new System.EventHandler(this.DeleteMenu_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(184, 6);
+            // 
             // SummaryReport
             // 
             this.SummaryReport.Name = "SummaryReport";
             this.SummaryReport.Size = new System.Drawing.Size(187, 22);
             this.SummaryReport.Text = "Отчет о сводном составе";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(184, 6);
             // 
             // Form1
             // 
@@ -119,8 +119,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(397, 317);
             this.Controls.Add(this.treeView1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.ShowIcon = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Автомобильные компоненты";
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
